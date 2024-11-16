@@ -1,0 +1,12 @@
+version: 1
+services:
+  - type: static
+    name: invidious-google-mod
+    env: static
+    staticPublishDir: public
+    buildCommand: npm install && npm run build
+    autoDeploy: true
+    route:
+      - type: path
+        value: /
+    branch: master
